@@ -1,0 +1,16 @@
+{
+  "name": "Be Free TV Ministries",
+  "short_name": "BeFreeTV",
+  "description": "Official App for Be Free Christian Church - Prophet Keletso Moenda",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0b1a3a",
+  "theme_color": "#0b1a3a",
+  "icons": [
+    {
+      "src": "52866.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
