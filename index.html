@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Be Free TV</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1a3a">
+  <style>
+    :root { --bg: #0b1a3a; --card: #162a52; --accent: #ff0000; --gold: #ffd700; --text: #ffffff; }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); padding-bottom: 90px; }
+    header { padding: 15px; font-size: 22px; font-weight: 900; text-align: center; background: #000; letter-spacing: 2px; color: var(--gold); border-bottom: 2px solid var(--gold); }
+    
+    .section { display: none; padding: 15px; animation: fadeIn 0.4s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* Year of Great Rewards Banner */
+    .year-banner { 
+      width: 100%; height: 220px; border-radius: 15px; 
+      background: linear-gradient(rgba(0,0,0,0.1), var(--bg)), url('52866.jpg'); 
+      background-size: cover; background-position: center;
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; box-sizing: border-box; margin-bottom: 25px;
+      border: 1px solid var(--gold);
+    }
+
+    /* Video Player */
+    .video-container { background: #000; border-radius: 15px; overflow: hidden; margin: 15px 0; border: 1px solid rgba(255,255,255,0.1); }
+    video { width: 100%; display: block; }
+
+    /* Scrolling Gallery */
+    .scroll-x { display: flex; overflow-x: auto; gap: 12px; padding: 10px 0; scrollbar-width: none; }
+    .scroll-x::-webkit-scrollbar { display: none; }
+    .quote-card { min-width: 280px; border-radius: 12px; overflow: hidden; position: relative; }
+    .quote-card img { width: 100%; height: auto; display: block; border-radius: 12px; }
+
+    /* Buttons */
+    .btn { background: var(--accent); color: #fff; padding: 15px; text-align: center; border-radius: 12px; font-weight: bold; margin: 10px 0; cursor: pointer; text-decoration: none; display: block; }
+    
+    /* Navigation Bar */
+    .bottom-nav { position: fixed; bottom: 0; width: 100%; background: #000; display: flex; justify-content: space-around; padding: 12px 0; border-top: 1px solid #333; z-index: 1000; }
+    .bottom-nav div { text-align: center; font-size: 11px; opacity: 0.5; color: #fff; cursor: pointer; }
+    .bottom-nav div.active { opacity: 1; color: var(--gold); font-weight: bold; }
+    .bottom-nav span { font-size: 24px; display: block; margin-bottom: 2px; }
+  </style>
+</head>
+<body>
+
+<header>BE FREE TV</header>
+
+<div id="home" class="section" style="display:block;">
+  <div class="year-banner">
+    <h3 style="margin:0; color:var(--gold); text-transform:uppercase;">The Year of</h3>
+    <h1 style="margin:0; font-size:28px; text-shadow: 2px 2px 10px #000;">GREAT REWARDS</h1>
+  </div>
+
+  <h4 style="color:var(--gold);">🔴 DEMONSTRATION OF POWER</h4>
+  <div class="video-container">
+    <video controls poster="39719.jpg">
+      <source src="143318.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <h4>📜 PROPHETIC WORDS</h4>
+  <div class="scroll-x">
+    <div class="quote-card"><img src="49176.png"></div>
+    <div class="quote-card"><img src="99538.jpg"></div>
+    <div class="quote-card"><img src="107843.png"></div>
+  </div>
+</div>
+
+<div id="live" class="section">
+  <div class="quote-card" style="margin-bottom:20px;"><img src="142162.jpg"></div>
+  <h3 style="color:var(--accent);">🔴 WATCH LIVE NOW</h3>
+  <iframe width="100%" height="220" src="https://www.youtube.com/embed/live_stream?channel=UC0Qn9lI9kS7mQJgWk7U0mZw" frameborder="0" allowfullscreen></iframe>
+  <a class="btn" href="https://www.facebook.com/ProphetKeletsoMoendaMinistries" target="_blank">Open Facebook Live</a>
+</div>
+
+<div id="sermons" class="section">
+  <h3>Recent Services</h3>
+  <iframe width="100%" height="450" src="https://www.youtube.com/embed?listType=playlist&list=UU0Qn9lI9kS7mQJgWk7U0mZw" frameborder="0" allowfullscreen></iframe>
+  <h4>Ministry Gallery</h4>
+  <div class="scroll-x">
+    <div class="quote-card" style="min-width:150px;"><img src="131171.jpg"></div>
+    <div class="quote-card" style="min-width:150px;"><img src="159265.jpg"></div>
+    <div class="quote-card" style="min-width:150px;"><img src="159267.jpg"></div>
+  </div>
+</div>
+
+<div id="social" class="section">
+  <div class="quote-card" style="margin-bottom:20px;"><img src="88221.jpg"></div>
+  <h3>Connect with us</h3>
+  <a class="btn" style="background:#00f2ea; color:#000;" href="https://www.tiktok.com/@prophetkmoendaministries" target="_blank">Follow TikTok</a>
+  <a class="btn" style="background:#1877f2;" href="https://www.facebook.com/ProphetKeletsoMoendaMinistries" target="_blank">Like Facebook</a>
+</div>
+
+<nav class="bottom-nav">
+  <div id="btn-home" class="active" onclick="goPage('home')"><span>🏠</span>Home</div>
+  <div id="btn-live" onclick="goPage('live')"><span>🔴</span>Live</div>
+  <div id="btn-sermons" onclick="goPage('sermons')"><span>📺</span>Sermons</div>
+  <div id="btn-social" onclick="goPage('social')"><span>🌍</span>Social</div>
+</nav>
+
+<script>
+function goPage(pageId) {
+  document.querySelectorAll('.section').forEach(s => s.style.display = "none");
+  document.querySelectorAll('.bottom-nav div').forEach(b => b.classList.remove('active'));
+  document.getElementById(pageId).style.display = "block";
+  document.getElementById('btn-' + pageId).classList.add('active');
+  window.scrollTo(0,0);
+}
+// Service Worker Registration for App Install
+if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }
+</script>
+</body>
+</html>
