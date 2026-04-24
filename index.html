@@ -14,31 +14,27 @@
     .section { display: none; padding: 15px; animation: fadeIn 0.4s ease; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    /* Year of Great Rewards Banner */
+    /* Themed Year Banner - Updated to .jpeg */
     .year-banner { 
       width: 100%; height: 220px; border-radius: 15px; 
-      background: linear-gradient(rgba(0,0,0,0.1), var(--bg)), url('52866.jpg'); 
+      background: linear-gradient(rgba(0,0,0,0.1), var(--bg)), url('1777019620987.jpeg'); 
       background-size: cover; background-position: center;
       display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; box-sizing: border-box; margin-bottom: 25px;
       border: 1px solid var(--gold);
     }
 
-    /* Video Player */
     .video-container { background: #000; border-radius: 15px; overflow: hidden; margin: 15px 0; border: 1px solid rgba(255,255,255,0.1); }
     video { width: 100%; display: block; }
 
-    /* Scrolling Gallery */
     .scroll-x { display: flex; overflow-x: auto; gap: 12px; padding: 10px 0; scrollbar-width: none; }
     .scroll-x::-webkit-scrollbar { display: none; }
     .quote-card { min-width: 280px; border-radius: 12px; overflow: hidden; position: relative; }
     .quote-card img { width: 100%; height: auto; display: block; border-radius: 12px; }
 
-    /* Buttons */
     .btn { background: var(--accent); color: #fff; padding: 15px; text-align: center; border-radius: 12px; font-weight: bold; margin: 10px 0; cursor: pointer; text-decoration: none; display: block; }
     
-    /* Navigation Bar */
     .bottom-nav { position: fixed; bottom: 0; width: 100%; background: #000; display: flex; justify-content: space-around; padding: 12px 0; border-top: 1px solid #333; z-index: 1000; }
-    .bottom-nav div { text-align: center; font-size: 11px; opacity: 0.5; color: #fff; cursor: pointer; }
+    .bottom-nav div { text-align: center; font-size: 11px; opacity: 0.5; color: #fff; }
     .bottom-nav div.active { opacity: 1; color: var(--gold); font-weight: bold; }
     .bottom-nav span { font-size: 24px; display: block; margin-bottom: 2px; }
   </style>
@@ -62,9 +58,11 @@
 
   <h4>📜 PROPHETIC WORDS</h4>
   <div class="scroll-x">
+    <div class="quote-card"><img src="1777019230817.jpeg"></div>
     <div class="quote-card"><img src="49176.png"></div>
     <div class="quote-card"><img src="99538.jpg"></div>
     <div class="quote-card"><img src="107843.png"></div>
+    <div class="quote-card"><img src="176776.jpg"></div>
   </div>
 </div>
 
@@ -88,9 +86,9 @@
 
 <div id="social" class="section">
   <div class="quote-card" style="margin-bottom:20px;"><img src="88221.jpg"></div>
-  <h3>Connect with us</h3>
-  <a class="btn" style="background:#00f2ea; color:#000;" href="https://www.tiktok.com/@prophetkmoendaministries" target="_blank">Follow TikTok</a>
-  <a class="btn" style="background:#1877f2;" href="https://www.facebook.com/ProphetKeletsoMoendaMinistries" target="_blank">Like Facebook</a>
+  <h3>Connect with the Prophet</h3>
+  <a class="btn" style="background:#00f2ea; color:#000;" href="https://www.tiktok.com/@prophetkmoendaministries" target="_blank">Follow on TikTok</a>
+  <a class="btn" style="background:#1877f2;" href="https://www.facebook.com/ProphetKeletsoMoendaMinistries" target="_blank">Like on Facebook</a>
 </div>
 
 <nav class="bottom-nav">
@@ -108,7 +106,6 @@ function goPage(pageId) {
   document.getElementById('btn-' + pageId).classList.add('active');
   window.scrollTo(0,0);
 }
-// Service Worker Registration for App Install
 if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }
 </script>
 </body>
